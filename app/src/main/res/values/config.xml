@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="user_folder_type">2</integer>				<!-- 文件夹打开样式：1：左右滑动样式，2：默认九宫格, 3： 带有底部推荐样式-->
+</resources>

@@ -1,0 +1,11 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@android:id/progress">
+        <clip
+            android:clipOrientation="vertical"
+            android:drawable="@drawable/mx_letter_circle_red"
+            android:gravity="bottom" >
+        </clip>
+    </item>
+
+</layer-list>

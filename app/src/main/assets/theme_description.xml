@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme>
+    <id>1407</id>
+    <version>1.0</version>
+    <uiVersion>1</uiVersion>
+    <date>2017-02-20</date>
+    <default>true</default>
+    <authors>
+        <author locale="zh_CN">官方</author>
+    </authors>
+    <titles>
+        <title locale="zh_CN">官方</title>
+    </titles>
+    <descriptions>
+        <description locale="zh_CN">官方</description>
+    </descriptions>
+    <cover>theme_img_cover.jpg</cover>
+    <previewImages>
+        <image>theme_img_des_1.jpg</image>
+        <image>theme_img_des_2.jpg</image>
+        <image>theme_img_des_3.jpg</image>
+    </previewImages>
+</theme>

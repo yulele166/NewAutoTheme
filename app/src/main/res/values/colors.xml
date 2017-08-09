@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="text_folder">#ffffff</color> 					<!-- 文件夹标题颜色 -->
+    <color name="widget_search_title">#00000000</color> 		<!-- 搜索小部件标题颜色 -->
+    <color name="widget_video_item_title">#ffffff</color> 		<!-- 视频小部件标题颜色 -->
+    <color name="widget_video_item_content">#72685c</color> 	<!-- 视频小部件描述颜色 -->
+    
+    <color name="bg_launcher_menu">#40bb3179</color>				<!-- 底部菜单背景色 -->
+    <color name="bg_bottom_menu">#99000000</color>				<!-- 底部编辑菜单背景色 -->
+    <color name="text_menu_pressed">#ffffff</color>				<!-- 底部菜单中选中的字体颜色 -->
+    <color name="color_text_menu">#4Cffffff</color>				<!-- 底部菜单中未选的字体颜色-->
+    <color name="text_menu_bottom">#bb3179</color>				<!-- 底部菜单下四个按钮字体颜色-->
+    <color name="text_editmode_bottom">#ffffff</color>			<!-- 编辑菜单下四个按钮字体颜色-->
+    
+    <color name="search_edit_hint_color">#6c6b71</color>		<!-- 搜索页搜索框提示-->
+    <color name="search_edit_txt_color">#e5e9ea</color>			<!-- 搜索页搜索框内容颜色 -->
+    <color name="search_cancel_color">#e5e9ea</color> 			<!-- 搜索页取消按钮字体颜色 -->
+    <color name="search_center_color">#b3b1b6</color> 			<!-- 搜索页搜索框下方提示内容颜色 -->
+    <color name="search_edit_bg_color">#00000000</color>		<!-- 搜索页搜索框背景颜色 -->
+	
+	<color name="text_folder_title">#99ffffff</color>
+    <color name="text_folder_title_focused">#ffffff</color>
+    <color name="text_folder_title_hint">#ff333333</color>
+	
+	<color name="widget_fast_clean_progress">#bb3179</color>	<!-- 一键清理进度字颜色 -->
+	<color name="folder_bg">#1Effffff</color>					<!-- 文件夹打开背景 -->
+	
+	<color name="color_dialog_message">#838383</color>			<!-- 对话框内容颜色 -->
+	<color name="dialog_cancel_txt">#838383</color>
+    <color name="dialog_ok_txt">#00aeff</color>
+    
+    <color name="widget_weather_txt">#bb3179</color>			<!--天气小部件字体颜色  -->
+    <color name="widget_weather_search_txt">#bb3179</color>		<!--带搜索天气小部件搜索标题颜色  -->
+  	<!-- <color name="theme_style_color">#83694d</color>	 --><!-- 主题图标颜色 -->
+  	
+  	<color name="icon_text_shade_color">#00000000</color>		<!-- 图标字体阴影颜色 -->
+</resources>

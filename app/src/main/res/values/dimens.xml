@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="view_default_margin_large">10dp</dimen>
+    <dimen name="text_size_16px">10sp</dimen>
+    <dimen name="view_default_margin">6dp</dimen>
+    <dimen name="line">1px</dimen>
+    <dimen name="widget_fast_clean_progress_size">5sp</dimen>
+    <dimen name="dialog_btn_margin">0dp</dimen>
+    <dimen name="dialog_btn_padding">0dp</dimen>
+
+    <dimen name="clean_widget_progress_size">54dp</dimen>
+    <dimen name="app_icon_padding">8dp</dimen>
+    <dimen name="app_icon_size">56dp</dimen>
+</resources>

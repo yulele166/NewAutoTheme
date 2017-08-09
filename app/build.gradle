@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '20.0.0'
+
+    defaultConfig {
+        applicationId "com.mycheering.launcher.auto.theme"
+        minSdkVersion 14
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField("int", "ICON_STYLE_TYPE", "0")
+
+        manifestPlaceholders = [
+                theme_name    : "theme",      //主题名称
+                theme_desc    : "主题",
+                theme_category: "android.intent.category.DEFAULT"    //是否有主启动程序
+        ]
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    signingConfigs {
+        debug {
+            keyAlias 'mycheering'
+            keyPassword 'mycheering'
+            storeFile file('./mycheering.keystore')
+            storePassword 'mycheering'
+        }
+        release {
+            keyAlias 'mycheering'
+            keyPassword 'mycheering'
+            storeFile file('./mycheering.keystore')
+            storePassword 'mycheering'
+        }
+    }
+
+    buildTypes {
+        release {
+            zipAlignEnabled true // zipalign优化
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    def app_id          = project.hasProperty('APPLICATIONID') ? APPLICATIONID : "com.mycheering.launcher.auto.theme"
+    def theme_name      = project.hasProperty('THEME_NAME') ? THEME_NAME : "theme"
+    def theme_desc      = project.hasProperty('THEME_DESC') ? THEME_DESC : "主题"
+    def icon_style_type = project.hasProperty('ICON_STYLE_TYPE') ? ICON_STYLE_TYPE : "0"
+
+    productFlavors {
+        "$theme_name" {
+            manifestPlaceholders = [
+                    theme_name    : "$theme_name",
+                    theme_desc    : "$theme_desc",
+                    theme_category: "android.intent.category.DEFAULT"
+            ]
+            applicationId app_id
+            buildConfigField("int", "ICON_STYLE_TYPE", "$icon_style_type")
+        }
+    }
+   
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            def outputPath = "/data0/operate/download/apks/"
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                File outputDirectory = new File(outputPath);
+                def fileName = outputFile.name
+                if (variant.buildType.name == "release") {
+                    fileName = "MycheeringTheme-release_v${defaultConfig.versionName}_${packageTime()}_${variant.productFlavors[0].name}.apk"
+                }
+                output.outputFile = new File(outputDirectory, fileName)
+            }
+        }
+    }
+}
+
+def packageTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+}
